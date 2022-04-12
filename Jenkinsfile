@@ -23,5 +23,12 @@ pipeline {
                 }
             }
         }
+        stage('Docker Build to Image') {
+            steps {
+                script {
+                    imageName = docker.build "nikunj1998/nickscalculator:latest"
+                }
+            }
+        }
     }
 }
