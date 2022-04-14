@@ -1,0 +1,8 @@
+---
+- name: Pull Docker Image of Calculator
+  hosts: all
+  tasks:
+    - name: Pull Nicks Calculator Image from Docker Hub
+      docker_image:
+        name: nikunj1998/nickscalculator
+        source: pull
