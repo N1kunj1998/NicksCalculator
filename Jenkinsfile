@@ -33,5 +33,15 @@ pipeline {
                 }
             }
         }
+        stage('Push Docker Image') {
+            steps {
+                script{
+                    docker.withRegistry("",'docker-jenkins'){
+                    imageName.push()
+                    }
+
+                }
+            }
+        }
     }
 }
