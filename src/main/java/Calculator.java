@@ -11,6 +11,18 @@ public class Calculator {
         return Math.sqrt(n);
     }
 
+    public static int factorial(int n){
+        if(n < 0) {
+            logger.info("Factorial of -ve number is not possible");
+            return -1;
+        } else {
+            int num = 1;
+            for (int i = 1; i <= n; i++) num *= i;
+            logger.info("Calculating Factorial Root of : " + n + "\n Result : ");
+            return num;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num;
@@ -31,6 +43,10 @@ public class Calculator {
                     System.out.println("Enter a number for sqrt\n");
                     num = scanner.nextInt();
                     System.out.println(sqrt(num));
+                case 2:
+                    System.out.println("Enter a number for factorial\n");
+                    num = scanner.nextInt();
+                    System.out.println(factorial(num));
             }
         }
     }
