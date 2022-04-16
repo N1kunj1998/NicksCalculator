@@ -23,6 +23,13 @@ public class Calculator {
         }
     }
 
+    public static double logarithm(double var){
+        logger.info("Calculating Natural Logarithm of : " + var + "\n Result : " + Math.log(var));
+        return Math.log(var);
+    }
+
+
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num;
@@ -43,10 +50,17 @@ public class Calculator {
                     System.out.println("Enter a number for sqrt\n");
                     num = scanner.nextInt();
                     System.out.println(sqrt(num));
+                    break;
                 case 2:
                     System.out.println("Enter a number for factorial\n");
                     num = scanner.nextInt();
                     System.out.println(factorial(num));
+                    break;
+                case 3:
+                    System.out.println("Enter a number for logarithm\n");
+                    double num1 = scanner.nextDouble();
+                    System.out.println(logarithm(num1));
+                    break;
             }
         }
     }

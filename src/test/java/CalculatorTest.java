@@ -23,4 +23,12 @@ public class CalculatorTest {
         int result = obj.factorial(num);
         Assert.assertEquals(expectedResult, result, 0);
     }
+
+    @Test
+    public void logarithm(){
+        double num = 10.0;
+        double expectedResult = 2.302585092994046;
+        double result = obj.logarithm(num);
+        Assert.assertEquals(expectedResult, result, 0);
+    }
 }
