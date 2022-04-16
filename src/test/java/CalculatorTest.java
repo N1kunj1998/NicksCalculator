@@ -31,4 +31,13 @@ public class CalculatorTest {
         double result = obj.logarithm(num);
         Assert.assertEquals(expectedResult, result, 0);
     }
+
+    @Test
+    public void power(){
+        double num1 = 2.0;
+        double num2 = 3.0;
+        double expectedResult = 8.0;
+        double result = obj.power(num1, num2);
+        Assert.assertEquals(expectedResult, result, 0);
+    }
 }

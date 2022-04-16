@@ -28,6 +28,10 @@ public class Calculator {
         return Math.log(var);
     }
 
+    public static double power(double var1, double var2){
+        logger.info("Power : " + var1 + "^" + var2 + "/n Result : " + Math.pow(var1, var2));
+        return Math.pow(var1, var2);
+    }
 
 
     public static void main(String[] args) {
@@ -60,6 +64,12 @@ public class Calculator {
                     System.out.println("Enter a number for logarithm\n");
                     double num1 = scanner.nextDouble();
                     System.out.println(logarithm(num1));
+                    break;
+                case 4:
+                    System.out.println("Enter a number for power\n");
+                    double n1 = scanner.nextDouble();
+                    double n2 = scanner.nextDouble();
+                    System.out.println(power(n1, n2));
                     break;
             }
         }
