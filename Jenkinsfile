@@ -33,6 +33,20 @@ pipeline {
                 }
             }
         }
+        stage('Push Docker Image') {
+            steps {
+                script{
+                    docker.withRegistry("",'docker-jenkins'){
+                    imageName.push()
+                    }
 
+                }
+            }
+        }
+        stage('Ansible pull docker image') {
+            steps {
+               ansiblePlaybook becomeUser: null, colorized: true, disableHostKeyChecking: true, installation: 'Ansible', inventory: 'deploy/inventory', playbook: 'deploy/playbook.yml', sudoUser: null
+            }
+        }
     }
 }
