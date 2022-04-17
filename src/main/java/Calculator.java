@@ -18,7 +18,7 @@ public class Calculator {
         } else {
             int num = 1;
             for (int i = 1; i <= n; i++) num *= i;
-            logger.info("Calculating Factorial Root of : " + n + "\n Result : ");
+            logger.info("Calculating Factorial of : " + n + "\n Result : " + num);
             return num;
         }
     }
