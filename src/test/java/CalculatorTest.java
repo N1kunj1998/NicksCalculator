@@ -40,4 +40,13 @@ public class CalculatorTest {
         double result = obj.power(num1, num2);
         Assert.assertEquals(expectedResult, result, 0);
     }
+
+    @Test
+    public void add(){
+        int num1 = 2;
+        int num2 = 3;
+        int expectedResult = 5;
+        int result = obj.add(num1, num2);
+        Assert.assertEquals(expectedResult, result, 0);
+    }
 }

@@ -13,7 +13,7 @@ public class Calculator {
 
     public static int factorial(int n){
         if(n < 0) {
-            logger.info("Factorial of -ve number is not possible");
+            logger.error("Factorial of -ve number is not possible");
             return -1;
         } else {
             int num = 1;
@@ -33,6 +33,11 @@ public class Calculator {
         return Math.pow(var1, var2);
     }
 
+    public static int add(int var1, int var2){
+        logger.info("Power : " + var1 + "^" + var2 + "\n Result : " + Math.pow(var1, var2));
+        return var1 + var2;
+    }
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -43,7 +48,8 @@ public class Calculator {
                     "Press 1 for Square root function\n" +
                     "Press 2 for Factorial function\n" +
                     "Press 3 for Natural logarithm\n" +
-                    "Press 4 for Power function");
+                    "Press 4 for Power function\n" +
+                    "Press 5 for add function");
 
             int input = scanner.nextInt();
 
@@ -70,6 +76,12 @@ public class Calculator {
                     double n1 = scanner.nextDouble();
                     double n2 = scanner.nextDouble();
                     System.out.println(power(n1, n2));
+                    break;
+                case 5:
+                    System.out.println("Enter a number for add\n");
+                    int nu1 = scanner.nextInt();
+                    int nu2 = scanner.nextInt();
+                    System.out.println(add(nu1, nu2));
                     break;
             }
         }
